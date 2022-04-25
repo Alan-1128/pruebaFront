@@ -1,0 +1,29 @@
+<br><br>
+<div class="container">
+  <div class="formulario">
+    <form class="form" autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="guardar()">
+      <div class="inputs">
+          <label >Tipo de documento</label>
+          <select formControlName="username" class="btn btn-light dropdown-toggle" type="button" aria-expanded="false">
+            <option > </option>
+            <option value="cdi">Cedula de ciudadanía</option>
+            <option value="passport">Pasaporte</option>
+          </select>
+      </div>
+      <br><br>
+
+        <div class="inputs">
+            <label for="password">Número de documento</label>
+            <span class="text-danger" 
+                      *ngIf="validacion('password')">
+                      Debe de ser entre 8 y 11 caracteres</span>
+            <input type="number" formControlName="password" name="password">
+        </div>
+      <br><br>
+
+        <div class="boton">
+            <button *ngIf="!this.miFormulario.invalid; disabled" type="submit" class="btn btn-primary">Continuar</button>
+        </div>
+      </form>
+  </div>
+</div>

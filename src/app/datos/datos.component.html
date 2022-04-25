@@ -1,0 +1,30 @@
+<br><br>
+<div class="container">
+  <div class="formulario">
+
+        <div class="inputs">
+            <label >Primer Nombre</label>
+            <input type="text" value="{{apiId.firstName}}">
+        </div>
+        <div class="inputs">
+          <label >Segundo Nombre</label>
+          <input type="text" value="{{apiId.secondName}}">
+        </div>
+        <div class="inputs">
+          <label >Primer Apellido</label>
+          <input type="text" value="{{apiId.firstSurname}}">
+        </div>
+        <div class="inputs">
+          <label >Segundo Apellido</label>
+          <input type="text" value="{{apiId.secondSurname}}">
+        </div>
+        <div class="inputs">
+          <label >Ciudad</label>
+          <input type="text" value="{{apiId.city}}">
+        </div>
+
+        <div class="boton">
+            <button (click)="guardar()" class="btn btn-primary">Atras</button>
+        </div>
+  </div>
+</div>
